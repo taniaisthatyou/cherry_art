@@ -1,0 +1,32 @@
+{
+  "name": "cherry_art",
+  "version": "1.0.0",
+  "description": "Cherry landing page",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "style-format": "npx stylelint 'src/**/*.scss' --fix --allow-empty-input",
+    "format": "prettier --ignore-path .prettierignore --write './src/**/*.{html,css,scss}'",
+    "lint": "npm run style-format && npm run format",
+    "test": "npm run lint",
+    "build": "parcel build src/index.html --dist-dir ./dist",
+    "deploy": "echo 'Deployment script here'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taniaisthatyou/cherry_art.git"
+  },
+  "author": "taniaisthatyou",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/taniaisthatyou/cherry_art/issues"
+  },
+  "homepage": "https://github.com/taniaisthatyou/cherry_art#readme",
+  "devDependencies": {
+    "@linthtml/linthtml": "^0.9.5",
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0",
+    "prettier": "^3.3.3",
+    "stylelint": "^16.10.0"
+  }
+}
